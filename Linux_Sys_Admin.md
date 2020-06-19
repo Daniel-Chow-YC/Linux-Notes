@@ -42,10 +42,28 @@
   - -p, --pid
 
 ## Administrating Users and Groups
+
+### Users
+
 - ``su <username>`` - substitute user (change user ID or become superuser)
   - by default if no name is given then become root
 
 - ``sudo useradd -m jane`` -- create a new user or update default new user information
-  -  -m, --create-home, --> Create the user's home directory if it does not exist.
+  -  -m, --create-home -> Create the user's home directory if it does not exist.
 
 - ``passwd`` -- change user password
+- ``sudo passwd jane``
+
+### Groups
+
+- ``groupadd <group_name>`` - create a new group
+
+- ``chown <[OWNER]:[GROUP]> <name_of_file>`` - Change the owner and/or group of each file
+  - eg ``sudo chown :<group_name> <file_name>``
+  - eg ``sudo chown <username> <filename>``
+
+##### Adding a user to a group
+
+- ``usermod -a -G <group_name> <username>``
+  - -a, --append -> Add the user to the supplementary group(s). Use only with the -G option.
+  - -G, --groups
