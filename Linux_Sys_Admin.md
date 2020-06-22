@@ -1,6 +1,6 @@
 # Linux System Administration
 
-## Optimising Your Linux Sytem
+## Optimising Your Linux System
 
 ### Monitoring System Resources
 - ``top`` - displays Linux processes
@@ -41,7 +41,7 @@
 - ``renice -n -20  -p 1055``
   - -p, --pid
 
-## Administrating Users and Groups
+## Working with Users and Groups in Linux
 
 ### Users
 
@@ -67,3 +67,23 @@
 - ``usermod -a -G <group_name> <username>``
   - -a, --append -> Add the user to the supplementary group(s). Use only with the -G option.
   - -G, --groups
+
+## Securing your Linux Server
+
+### Object Permissions
+````
+ r -> 4    (read)               u -> user
+ w -> 2    (write)              g -> group
+ x -> 1   (execute)             o -> other
+````
+
+- ``chmod u+x <file1>``   -- add execute permissions for user
+- ``chmod +x <file1>``    -- add execute permissions for all u, g and o
+- ``chmod g-w <file1>``   -- remove write permissions for group
+- ``chmod ug=rw <file1>`` -- make permissions for user and group read and write
+
+### Port Scanning
+- nmap - Network exploration tool and security / port scanner
+- ``nmap -v -sT localhost`` or ``nmap -v -sT <some_IP>``
+  - -v, for verbose
+  - -sT scan using TCP connect
