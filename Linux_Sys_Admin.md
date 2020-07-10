@@ -91,6 +91,8 @@
 ### Checking Network Connections
 - netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
 - ``sudo netstat -tupln``
-<p>&nbsp;</p>
+
+<p> </p>
+
 - ss - socket statistics
 - ``sudo ss -tupln``
