@@ -87,3 +87,10 @@
 - ``nmap -v -sT localhost`` or ``nmap -v -sT <some_IP>``
   - -v, for verbose
   - -sT scan using TCP connect
+
+### Checking Network Connections
+- netstat - Print network connections, routing tables, interface statistics, masquerade connections, and multicast memberships
+- ``sudo netstat -tupln``
+
+- ss - socket statistics
+- ``sudo ss -tupln``
